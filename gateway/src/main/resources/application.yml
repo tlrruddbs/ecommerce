@@ -15,8 +15,18 @@ cloud:
       - id: first-service
         url: http://localhost:8081/
         predicates:
-        - Path=/first-service/**
+          - Path=/first-service/**
+        filters:
+          - CustomFilter
+
+#        filters:
+#          - CustomFilter
+
       - id: second-service
         url: http://localhost:8082/
         predicates:
           - Path=/second-service/**
+        filters:
+          - CustomFilter
+#        filters:
+#          - CustomFilter
