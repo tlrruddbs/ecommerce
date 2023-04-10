@@ -18,13 +18,16 @@ spring:
             preLogger: true
             postLogger: true
       routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user-service/**
         - id: first-service
           uri: lb://my-first-service
           predicates:
             - Path=/first-service/**
           filters:
             - CustomFilter
-
         - id: second-service
           uri: lb://my-second-service
           predicates:
@@ -36,3 +39,4 @@ spring:
                 baseMessage: hi, there.
                 preLogger: true
                 postLogger: true
+
