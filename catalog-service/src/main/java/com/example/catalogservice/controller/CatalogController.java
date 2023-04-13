@@ -5,6 +5,7 @@ import com.example.catalogservice.service.CatalogService;
 import com.example.catalogservice.vo.ResponseCatalog;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +18,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/catalog-service")
-@RequiredArgsConstructor
 public class CatalogController {
-    private final Environment env;
-    private final CatalogService catalogService;
+    Environment env;
+    CatalogService catalogService;
+
+    @Autowired
+    public CatalogController(Environment env, CatalogService catalogService){
+        this.env = env;
+        this.catalogService = catalogService;
+    }
 
     @GetMapping("/health_check")
     public String status(){
