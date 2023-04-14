@@ -35,10 +35,19 @@ public class CatalogController {
 
     @GetMapping("/catalogs")
     public ResponseEntity<List<ResponseCatalog>> getUsers(){
-        Iterable<CatalogEntity> userList = catalogService.getAllCatalogs();
+        List<CatalogEntity> catalogList = catalogService.getAllCatalogs();
 
         List<ResponseCatalog> result = new ArrayList<>();
-        userList.forEach(v -> {
+        catalogList.forEach(v -> {
+//            ResponseCatalog catalog = new ResponseCatalog();
+//            catalog.setProductId(v.getProductId());
+//            catalog.setProductName(v.getProductName());
+//            catalog.setStock(v.getStock());
+//            catalog.setStock(v.getStock());
+//            catalog.setCreateAt(v.getCreatedAt());
+//
+//            result.add(catalog);
+
             result.add(new ModelMapper().map(v, ResponseCatalog.class));
         });
 

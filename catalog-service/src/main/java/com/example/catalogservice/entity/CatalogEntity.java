@@ -2,12 +2,16 @@ package com.example.catalogservice.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.io.Serializable;
 import java.util.Date;
 
 @Data
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "catalog")
 public class CatalogEntity implements Serializable {

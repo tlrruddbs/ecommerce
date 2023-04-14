@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 public class CatalogServiceImpl implements CatalogService{
@@ -19,7 +21,7 @@ public class CatalogServiceImpl implements CatalogService{
         this.catalogRepository = catalogRepository;
     }
     @Override
-    public Iterable<CatalogEntity> getAllCatalogs() {
+    public List<CatalogEntity> getAllCatalogs() {
         return catalogRepository.findAll();
     }
 }
