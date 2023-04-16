@@ -25,11 +25,3 @@ eureka:
 
 greeting:
   message: welcome to the simple e-commerce.
-
-logging:
-  level:
-    com.example.userservice: DEBUG
-
-token:
-  expiration_time: 86400000
-  secret: userTokenSECRETCREATEBYtlrruaddbsuserTokenSECRETCREATEBYtlrrudddbsuserTokenSECRETCREATEBYtlreruddbsuserTokenSECRETCREATEBYtlrrudddbs

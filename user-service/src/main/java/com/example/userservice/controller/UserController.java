@@ -22,7 +22,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @RestController
-//@RequestMapping("/user-service")
+@RequestMapping("/user-service")
 @RequiredArgsConstructor
 public class UserController {
 
