@@ -1,6 +1,12 @@
 server:
   port: 0
 spring:
+  config:
+    import: "optional:config-service:http://127.0.0.1:8888/"
+  cloud:
+    config:
+      name: ecommerce
+      profile: local
   application:
     name: user-service
   h2:
@@ -13,6 +19,12 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:test
     username: sa
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans
 
 eureka:
   instance:
@@ -30,6 +42,6 @@ logging:
   level:
     com.example.userservice: DEBUG
 
-token:
-  expiration_time: 86400000
-  secret: userTokenSECRETCREATEBYtlrruaddbsuserTokenSECRETCREATEBYtlrrudddbsuserTokenSECRETCREATEBYtlreruddbsuserTokenSECRETCREATEBYtlrrudddbs
+#token:
+#  expiration_time: 86400000
+#  secret: userTokenSECRETCREATEBYtlrruaddbsuserTokenSECRETCREATEBYtlrrudddbsuserTokenSECRETCREATEBYtlreruddbsuserTokenSECRETCREATEBYtlrrudddbs
