@@ -1,0 +1,17 @@
+token:
+  expiration_time: 86400000
+  secret: userTokenSECRETCREATEBYtlrruaddbsuserTokenSECRETCREATEBYtlrrudddbsuserTokenSECRETCREATEBYtlreruddbsuserTokenSECRETCREATEBYtlrrudddbs
+gateway:
+  ip: 192.168.0.114
+
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:C:\IdeaProjects\ecommerce\config-service
