@@ -1,6 +1,10 @@
 server:
   port: 0
 spring:
+  cloud:
+    config:
+      name: ecommerce
+      profile: local
   application:
     name: user-service
   h2:
@@ -13,6 +17,10 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:test
     username: sa
+  config:
+    import:
+      - classpath:/bootstrap.yml
+
 
 eureka:
   instance:
@@ -30,6 +38,6 @@ logging:
   level:
     com.example.userservice: DEBUG
 
-token:
-  expiration_time: 86400000
-  secret: userTokenSECRETCREATEBYtlrruaddbsuserTokenSECRETCREATEBYtlrrudddbsuserTokenSECRETCREATEBYtlreruddbsuserTokenSECRETCREATEBYtlrrudddbs
+#token:
+#  expiration_time: 86400000
+#  secret: userTokenSECRETCREATEBYtlrruaddbsuserTokenSECRETCREATEBYtlrrudddbsuserTokenSECRETCREATEBYtlreruddbsuserTokenSECRETCREATEBYtlrrudddbs
