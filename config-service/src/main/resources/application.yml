@@ -1,8 +1,4 @@
-token:
-  expiration_time: 86400000
-  secret: userTokenSECRETCREATEBYtlrruaddbsuserTokenSECRETCREATEBYtlrrudddbsuserTokenSECRETCREATEBYtlreruddbsuserTokenSECRETCREATEBYtlrrudddbs
-gateway:
-  ip: 192.168.0.114
+
 
 server:
   port: 8888
@@ -14,4 +10,5 @@ spring:
     config:
       server:
         git:
-          uri: file:C:\IdeaProjects\ecommerce\config-service
+          uri: https://github.com/tlrruddbs/config-server
+          default-label: master
