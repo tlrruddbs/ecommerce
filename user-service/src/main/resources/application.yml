@@ -1,8 +1,6 @@
 server:
   port: 0
 spring:
-  config:
-    import: "optional:config-service:http://127.0.0.1:8888/"
   cloud:
     config:
       name: ecommerce
@@ -19,12 +17,10 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:test
     username: sa
+  config:
+    import:
+      - classpath:/bootstrap.yml
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: refresh, health, beans
 
 eureka:
   instance:
