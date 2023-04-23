@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      import: "optional:config-service:http://127.0.0.1:8888/"
+      name: ecommerce
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, httptrace
