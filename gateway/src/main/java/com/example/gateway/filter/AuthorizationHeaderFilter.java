@@ -52,6 +52,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
         boolean returnValue = true;
 
         String subject  = null;
+        System.out.println(env.getProperty("token.expiration_time"));
         try {
             subject = Jwts.parserBuilder().setSigningKey(env.getProperty("token.secret"))
                     .build().parseClaimsJws(jwt).getBody()
