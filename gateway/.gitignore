@@ -24,6 +24,7 @@ bin/
 *.bin
 *.lock
 .idea
+*.idea
 *.iws
 *.iml
 *.ipr
