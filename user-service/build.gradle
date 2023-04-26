@@ -65,6 +65,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bus-amqp
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-bus-amqp', version: '4.0.0'
 
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-feign', version: '1.4.4.RELEASE'
+
 
 }
 
