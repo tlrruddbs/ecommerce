@@ -9,7 +9,7 @@ spring:
   cloud:
     config:
       name: ecommerce
-      profile: local
+      profile: dev
   application:
     name: user-service
   h2:
@@ -41,7 +41,7 @@ greeting:
 
 logging:
   level:
-    com.example.userservice: DEBUG
+    com.example.userservice.client: DEBUG
 
 management:
   endpoints:
