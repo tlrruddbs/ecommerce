@@ -1,0 +1,29 @@
+
+
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tlrruddbs/config-server
+          default-label: master
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  config:
+    import:
+      - classpath:/bootstrap.yml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
+encrypt:
+  key: abcdefghijklmnopqrstuvwxyz1234567890
